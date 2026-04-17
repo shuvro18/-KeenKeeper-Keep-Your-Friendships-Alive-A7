@@ -5,13 +5,13 @@ live : https://keenkeeper-friends-a7.netlify.app/
 
 KeenKeeper is a personal relationship management dashboard designed to help you nurture and maintain meaningful connections with your friends. It tracks your interactions and provides visual insights to ensure no important relationship is neglected.
 
-## 🚀 Key Features
+##  Key Features
 
 * **Friendship Timeline:** View a historical log of all your interactions (Calls, Texts, Videos) with a dynamic filtering system to sort by interaction type.
 * **Interaction Analytics:** A visual breakdown of your communication habits using interactive Pie Charts to show the distribution of calls, texts, and video chats.
 * **Quick Check-ins:** Easily record new interactions directly from a friend's profile page with a single click, keeping your records up-to-date instantly.
 
-## 🛠 Technologies Used
+##  Technologies Used
 
 * **Framework:** React.js (utilizing modern hooks and Context API)
 * **Routing:** React Router v7 (with data loaders and dynamic parameters)
@@ -19,7 +19,7 @@ KeenKeeper is a personal relationship management dashboard designed to help you 
 * **Data Visualization:** Recharts
 * **Icons & UI:** React Icons & React Toastify
 
-## 📋 Project Structure
+##  Project Structure
 
 * `Context.jsx`: Manages global state for button interactions and friend data.
 * `Timeline.jsx`: Handles the logic for filtering and displaying interaction history.
