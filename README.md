@@ -1,16 +1,30 @@
-# React + Vite
+repo : https://github.com/shuvro18/-KeenKeeper-Keep-Your-Friendships-Alive-A7
+live : https://keenkeeper-friends-a7.netlify.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# KeenKeeper 🤝
 
-Currently, two official plugins are available:
+KeenKeeper is a personal relationship management dashboard designed to help you nurture and maintain meaningful connections with your friends. It tracks your interactions and provides visual insights to ensure no important relationship is neglected.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Key Features
 
-## React Compiler
+* **Friendship Timeline:** View a historical log of all your interactions (Calls, Texts, Videos) with a dynamic filtering system to sort by interaction type.
+* **Interaction Analytics:** A visual breakdown of your communication habits using interactive Pie Charts to show the distribution of calls, texts, and video chats.
+* **Quick Check-ins:** Easily record new interactions directly from a friend's profile page with a single click, keeping your records up-to-date instantly.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Technologies Used
 
-## Expanding the ESLint configuration
+* **Framework:** React.js (utilizing modern hooks and Context API)
+* **Routing:** React Router v7 (with data loaders and dynamic parameters)
+* **Styling:** Tailwind CSS & DaisyUI
+* **Data Visualization:** Recharts
+* **Icons & UI:** React Icons & React Toastify
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📋 Project Structure
+
+* `Context.jsx`: Manages global state for button interactions and friend data.
+* `Timeline.jsx`: Handles the logic for filtering and displaying interaction history.
+* `ShowDetails.jsx`: Displays comprehensive information about individual friends and provides interaction buttons.
+* `State.jsx`: Processes data to render friendship analytics using charts.
+
+---
+Developed by **SHUVRO BISWAS NAYON** *Aspiring Full Stack Developer | Frontend Specialist*
