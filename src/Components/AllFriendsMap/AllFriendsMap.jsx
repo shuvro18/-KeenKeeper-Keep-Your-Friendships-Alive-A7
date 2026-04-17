@@ -1,9 +1,10 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const AllFriendsMap = ({friend}) => {
     
     return (
-        <div>
+        <NavLink to={`/details/${friend.id}`}>
             <div className='bg-white rounded-xl p-6'>
                 <img className='rounded-full mx-auto' src={friend.picture} alt="" />
                 <h3 className='text-xl font-bold text-neutral/85 text-center'>{friend.name}</h3>
@@ -17,7 +18,7 @@ const AllFriendsMap = ({friend}) => {
                     <div className={`text-white ${friend.status === "on-track" ? "badge bg-[#244D3F]": friend.status === "overdue" ? "badge badge-secondary" : "badge badge-warning"}`}>{friend.status}</div>
                 </div>
             </div>
-        </div>
+        </NavLink>
     );
 };
 
