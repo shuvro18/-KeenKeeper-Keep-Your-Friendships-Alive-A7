@@ -38,6 +38,7 @@ const ShowDetails = () => {
                             }
                         </div>
                         <p className='text-center text-sm text-neutral/50 mx-auto'>"{findFriend.bio}"</p>
+                        <p className='text-center text-sm text-neutral/50 mx-auto py-3'>{findFriend.email}</p>
                     </div>
                     <div className='shadow-xl flex flex-col justify-center items-center p-10 space-y-2.5 rounded-2xl bg-white'>
                         <p className='font-bold text-2xl text-neutral/70'>{findFriend.days_since_contact}</p>
