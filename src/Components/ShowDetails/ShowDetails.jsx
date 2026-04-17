@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext }  from 'react';
 import { BiPhoneCall } from 'react-icons/bi';
 import { CiBellOn } from 'react-icons/ci';
 import { FiArchive } from 'react-icons/fi';
@@ -6,14 +6,19 @@ import { IoMdText } from 'react-icons/io';
 import { IoVideocamOutline } from 'react-icons/io5';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router';
+import Context, { friendContext } from '../FriendContext/Context';
 
 const ShowDetails = () => {
     const { id } = useParams();
     const friends = useLoaderData();
 
+    const {handleButtons} = useContext(friendContext);
+    
+    
+
 
     const findFriend = friends.find(friend => friend.id === parseInt(id))
-    console.log(findFriend)
+    
     return (
         <div className='bg-base-200'>
             <div className='w-9/12 mx-auto py-20'>
@@ -67,17 +72,17 @@ const ShowDetails = () => {
                     <div className='col-span-3 bg-white rounded-2xl p-7 row-span-3'>
                         <p className='text-xl font-bold text-neutral/50'>Quick Check-In</p>
                         <div className='grid grid-cols-3 gap-4 '>
-                            <div className=' flex flex-col justify-center items-center p-10 space-y-2.5 rounded-sm bg-base-200'>
+                            <div onClick={()=>handleButtons(findFriend,"call")} className='cursor-pointer flex flex-col justify-center items-center p-10 space-y-2.5 rounded-sm bg-base-200'>
                                 <BiPhoneCall className='text-2xl' />
                                 <p className='text-neutral/50'>Call</p>
                             </div>
 
-                            <div className=' flex flex-col justify-center items-center p-10 space-y-2.5 rounded-2xl bg-base-200'>
+                            <div  onClick={()=>handleButtons(findFriend,"text")} className='cursor-pointer flex flex-col justify-center items-center p-10 space-y-2.5 rounded-2xl bg-base-200'>
                                 <IoMdText  className='text-2xl' />
                                 <p className='text-neutral/50'>Text</p>
                             </div>
 
-                            <div className=' flex flex-col justify-center items-center p-10 space-y-2.5 rounded-2xl bg-base-200'>
+                            <div  onClick={()=>handleButtons(findFriend,"video")} className='cursor-pointer flex flex-col justify-center items-center p-10 space-y-2.5 rounded-2xl bg-base-200'>
                                 <IoVideocamOutline className='text-2xl' />
                                 <p className='text-neutral/50'>Video</p>
                             </div>
@@ -85,7 +90,7 @@ const ShowDetails = () => {
                         </div>
                     </div>
 
-                    <div className='bg-white rounded-xl col-span-3 md:col-span-2 lg:col-span-2 p-6'>
+                    <div  className='bg-white rounded-xl col-span-3 md:col-span-2 lg:col-span-2 p-6'>
                         <div className='flex justify-center items-center gap-3'>
                             <FiArchive className='text-xl' />
                             <p className='font-semibold'>Archive</p>

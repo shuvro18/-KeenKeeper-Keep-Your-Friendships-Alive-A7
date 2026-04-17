@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { friendContext } from '../FriendContext/Context';
 
 const Timeline = () => {
+
+    const {button}= useContext(friendContext);
+    
+    
+    
+
     return (
         <div>
-            <h2>This is time line </h2>
+            {
+                button.map((element,index)=>)
+            }
         </div>
     );
 };
